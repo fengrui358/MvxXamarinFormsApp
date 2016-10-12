@@ -1,0 +1,2 @@
+# MvxXamarinFormsApp
+XamarinForms的代码基架，使用的Mvvm库为MvvmCrossForms，集成了部分常用的插件
