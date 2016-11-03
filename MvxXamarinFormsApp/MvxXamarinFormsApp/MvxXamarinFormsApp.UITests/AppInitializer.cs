@@ -38,6 +38,8 @@ namespace MvxXamarinFormsApp.UITests
             }
         }
 
+        public TimeSpan GestureCompletionTimeout { get; }
+
         public TimeSpan WaitForTimeout
         {
             get
