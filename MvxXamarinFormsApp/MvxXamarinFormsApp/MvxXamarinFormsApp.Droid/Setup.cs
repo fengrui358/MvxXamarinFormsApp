@@ -5,6 +5,7 @@ using MvvmCross.Droid.Views;
 using MvvmCross.Forms.Presenter.Droid;
 using MvvmCross.Core.ViewModels;
 using MvvmCross.Core.Views;
+using MvxXamarinFormsApp.Droid.MvxBase;
 
 namespace MvxXamarinFormsApp.Droid
 {
@@ -28,7 +29,7 @@ namespace MvxXamarinFormsApp.Droid
 
         protected override IMvxAndroidViewPresenter CreateViewPresenter()
         {
-            var presenter = new MvxFormsDroidPagePresenter();
+            var presenter = new MvxFormsDroidPagePresenterEx();
             Mvx.RegisterSingleton<IMvxViewPresenter>(presenter);
 
             return presenter;

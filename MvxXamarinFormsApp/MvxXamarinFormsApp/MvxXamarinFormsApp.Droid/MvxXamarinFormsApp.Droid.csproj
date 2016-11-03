@@ -177,8 +177,8 @@
   <ItemGroup>
     <Compile Include="Bootstrap\SqlitePluginBootstrap.cs" />
     <Compile Include="Linker.cs" />
+    <Compile Include="MvxBase\MvxFormsDroidPagePresenterEx.cs" />
     <Compile Include="MvxFormsApplicationActivity.cs" />
-    <Compile Include="MvxFormsDroidPageExPresenter.cs" />
     <Compile Include="Resources\Resource.Designer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Services\LocalizeService.cs" />

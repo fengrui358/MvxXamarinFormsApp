@@ -39,6 +39,8 @@
   <ItemGroup>
     <Compile Include="App.cs" />
     <Compile Include="Model\BaseModel.cs" />
+    <Compile Include="MvxBase\MvxFormsPagePresenterEx.cs" />
+    <Compile Include="MvxBase\MvxPresentationHint\MvxCloseToViewModelPresentationHint.cs" />
     <Compile Include="Repository\BaseRepository.cs" />
     <Compile Include="Repository\IRepository.cs" />
     <Compile Include="Resources\AppResources.en-US.Designer.cs">
@@ -59,6 +61,18 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Resources\TranslateExtension.cs" />
     <Compile Include="Services\ILocalizeService.cs" />
+    <Compile Include="Tests\NavigationTests\ViewModels\NavigationTestThirdViewModel.cs" />
+    <Compile Include="Tests\NavigationTests\ViewModels\NavigationTestSecondViewModel.cs" />
+    <Compile Include="Tests\NavigationTests\ViewModels\NavigationTestFirstViewModel.cs" />
+    <Compile Include="Tests\NavigationTests\Views\NavigationTestThirdPage.xaml.cs">
+      <DependentUpon>NavigationTestThirdPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Tests\NavigationTests\Views\NavigationTestSecondPage.xaml.cs">
+      <DependentUpon>NavigationTestSecondPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Tests\NavigationTests\Views\NavigationTestFirstPage.xaml.cs">
+      <DependentUpon>NavigationTestFirstPage.xaml</DependentUpon>
+    </Compile>
     <Compile Include="ViewModels\BaseViewModel.cs" />
     <Compile Include="ViewModels\MainViewModel.cs" />
     <Compile Include="Views\MainPage.xaml.cs">
@@ -114,7 +128,9 @@
   <ItemGroup>
     <None Include="packages.config" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="Interface\" />
+  </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Resources\AppResources.en-US.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -129,6 +145,24 @@
       <LastGenOutput>AppResources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="Views\MainPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Tests\NavigationTests\Views\NavigationTestFirstPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Tests\NavigationTests\Views\NavigationTestSecondPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Tests\NavigationTests\Views\NavigationTestThirdPage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
       <SubType>Designer</SubType>
     </EmbeddedResource>

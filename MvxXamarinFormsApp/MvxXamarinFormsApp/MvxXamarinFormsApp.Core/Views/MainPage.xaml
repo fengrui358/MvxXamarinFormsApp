@@ -1,12 +1,14 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
-<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+<core:MvxContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="MvxXamarinFormsApp.Core.Views.MainPage"
-             xmlns:res="clr-namespace:MvxXamarinFormsApp.Core.Resources;assembly=MvxXamarinFormsApp.Core">
-  <Grid>
+             xmlns:res="clr-namespace:MvxXamarinFormsApp.Core.Resources;assembly=MvxXamarinFormsApp.Core"
+             xmlns:core="clr-namespace:MvvmCross.Forms.Presenter.Core;assembly=MvvmCross.Forms.Presenter.Core">
+  <StackLayout VerticalOptions="Center">
     <Label Text="{res:Translate MainPageTitle}"
            VerticalOptions="Center"
            HorizontalOptions="Center"
            StyleId="MainPageTitleLbl" />
-  </Grid>
-</ContentPage>
+    <Button Text="导航测试" Command="{Binding NavigateCommand}"></Button>
+  </StackLayout>
+</core:MvxContentPage>

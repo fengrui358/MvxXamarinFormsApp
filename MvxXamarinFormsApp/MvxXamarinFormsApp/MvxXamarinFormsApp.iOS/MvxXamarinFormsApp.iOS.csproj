@@ -90,6 +90,7 @@
     <Compile Include="Linker.cs" />
     <Compile Include="Main.cs" />
     <Compile Include="AppDelegate.cs" />
+    <Compile Include="MvxBase\MvxFormsIosPagePresenterEx.cs" />
     <Compile Include="Services\LocalizeService.cs" />
     <Compile Include="Setup.cs" />
     <None Include="GettingStarted.Xamarin" />

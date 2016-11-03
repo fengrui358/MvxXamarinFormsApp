@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<core:MvxContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:core="clr-namespace:MvvmCross.Forms.Presenter.Core;assembly=MvvmCross.Forms.Presenter.Core"
+             x:Class="MvxXamarinFormsApp.Core.Tests.NavigationTests.Views.NavigationTestSecondPage">
+  <StackLayout VerticalOptions="Center">
+    <Label Text="我是第二页" VerticalOptions="Center" HorizontalOptions="Center" />
+    <Button Text="进入第三页" Command="{Binding NavigateToThirdCommand}"></Button>
+    <Button Text="返回第一页" Command="{Binding NavigateGoBackCommand}"></Button>
+    <Button Text="回到首页" Command="{Binding NavigateGoBackToRootCommand}"></Button>
+  </StackLayout>
+</core:MvxContentPage>

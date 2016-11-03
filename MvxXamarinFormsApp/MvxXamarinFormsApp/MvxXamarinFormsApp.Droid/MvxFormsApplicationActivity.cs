@@ -8,6 +8,7 @@ using MvvmCross.Forms.Presenter.Droid;
 using MvvmCross.Core.ViewModels;
 using Android.App;
 using Android.Content.PM;
+using MvxXamarinFormsApp.Droid.MvxBase;
 
 namespace MvxXamarinFormsApp.Droid
 {
@@ -22,7 +23,7 @@ namespace MvxXamarinFormsApp.Droid
             var mvxFormsApp = new MvxFormsApp();
             LoadApplication(mvxFormsApp);
 
-            var presenter = Mvx.Resolve<IMvxViewPresenter>() as MvxFormsDroidPagePresenter;
+            var presenter = Mvx.Resolve<IMvxViewPresenter>() as MvxFormsDroidPagePresenterEx;
             presenter.MvxFormsApp = mvxFormsApp;
 
             Mvx.Resolve<IMvxAppStart>().Start();

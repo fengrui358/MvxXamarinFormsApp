@@ -6,6 +6,7 @@ using Xamarin.Forms;
 using MvvmCross.Forms.Presenter.iOS;
 using MvvmCross.Forms.Presenter.Core;
 using MvvmCross.Platform;
+using MvxXamarinFormsApp.iOS.MvxBase;
 
 namespace MvxXamarinFormsApp.iOS
 {
@@ -34,7 +35,7 @@ namespace MvxXamarinFormsApp.iOS
 
             var xamarinFormsApp = new MvxFormsApp();
 
-            return new MvxFormsIosPagePresenter(Window, xamarinFormsApp);
+            return new MvxFormsIosPagePresenterEx(Window, xamarinFormsApp);
         }
     }
 }
