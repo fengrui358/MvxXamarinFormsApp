@@ -4,6 +4,8 @@ using MvvmCross.Platform.IoC;
 using Xamarin.Forms;
 using MvvmCross.Platform;
 using MvvmCross.Plugins.Sqlite;
+using MvxXamarinFormsApp.Core.Repository;
+using MvxXamarinFormsApp.Core.Tests.SqliteTests.DataRepositories;
 using MvxXamarinFormsApp.Core.Tests.SqliteTests.Models;
 
 namespace MvxXamarinFormsApp.Core
@@ -36,11 +38,7 @@ namespace MvxXamarinFormsApp.Core
             //初始化数据库相关内容
             await Task.Run(() =>
             {
-                var conFactory = Mvx.Resolve<IMvxSqliteConnectionFactory>();
-                using (var con = conFactory.GetConnection("db"))
-                {
-                    con.CreateTable<SqliteTestModel>();
-                }
+                Mvx.RegisterSingleton(typeof(IRepository<SqliteTestModel>), () => new SqliteTestRepository());
             });
         }
     }

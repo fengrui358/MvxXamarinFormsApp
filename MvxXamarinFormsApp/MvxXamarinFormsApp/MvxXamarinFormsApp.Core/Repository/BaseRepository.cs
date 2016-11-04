@@ -1,6 +1,7 @@
 ﻿using MvvmCross.Platform;
 using MvvmCross.Plugins.Sqlite;
 using System.Collections.Generic;
+using System.Linq;
 using MvxXamarinFormsApp.Core.Model;
 
 namespace MvxXamarinFormsApp.Core.Repository
@@ -33,7 +34,7 @@ namespace MvxXamarinFormsApp.Core.Repository
         {
             using (var conn = _connectionFactory.GetConnection(DbName))
             {
-                return conn.Table<T>();
+                return conn.Table<T>().ToList();
             }
         }
 
@@ -58,7 +59,7 @@ namespace MvxXamarinFormsApp.Core.Repository
         {
             using (var conn = _connectionFactory.GetConnection(DbName))
             {
-                return conn.Delete<T>(item.ID);
+                return conn.Delete<T>(item.Id);
             }
         }
     }

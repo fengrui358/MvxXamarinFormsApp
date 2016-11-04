@@ -73,6 +73,7 @@
     <Compile Include="Tests\NavigationTests\Views\NavigationTestFirstPage.xaml.cs">
       <DependentUpon>NavigationTestFirstPage.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Tests\SqliteTests\DataRepositories\SqliteTestRepository.cs" />
     <Compile Include="Tests\SqliteTests\Models\SqliteTestModel.cs" />
     <Compile Include="Tests\SqliteTests\ViewModels\SqliteTestViewModel.cs" />
     <Compile Include="Tests\SqliteTests\Views\SqliteTestPage.xaml.cs">
