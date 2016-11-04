@@ -1,7 +1,10 @@
-﻿using MvvmCross.Core.ViewModels;
+﻿using System.Threading.Tasks;
+using MvvmCross.Core.ViewModels;
 using MvvmCross.Platform.IoC;
 using Xamarin.Forms;
 using MvvmCross.Platform;
+using MvvmCross.Plugins.Sqlite;
+using MvxXamarinFormsApp.Core.Tests.SqliteTests.Models;
 
 namespace MvxXamarinFormsApp.Core
 {
@@ -24,7 +27,21 @@ namespace MvxXamarinFormsApp.Core
                 Resources.AppResources.Culture = Mvx.Resolve<Services.ILocalizeService>().GetCurrentCultureInfo();
             }
 
+            InitDataBase();
             RegisterAppStart<ViewModels.MainViewModel>();
+        }
+
+        private async void InitDataBase()
+        {
+            //初始化数据库相关内容
+            await Task.Run(() =>
+            {
+                var conFactory = Mvx.Resolve<IMvxSqliteConnectionFactory>();
+                using (var con = conFactory.GetConnection("db"))
+                {
+                    con.CreateTable<SqliteTestModel>();
+                }
+            });
         }
     }
 }

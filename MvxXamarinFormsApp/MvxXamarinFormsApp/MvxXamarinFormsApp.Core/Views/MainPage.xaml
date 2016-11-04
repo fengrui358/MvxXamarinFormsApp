@@ -10,5 +10,6 @@
            HorizontalOptions="Center"
            StyleId="MainPageTitleLbl" />
     <Button Text="导航测试" Command="{Binding NavigateCommand}"></Button>
+    <Button Text="Sqlite测试" Command="{Binding SqliteTestCommand}"></Button>
   </StackLayout>
 </core:MvxContentPage>

@@ -73,6 +73,11 @@
     <Compile Include="Tests\NavigationTests\Views\NavigationTestFirstPage.xaml.cs">
       <DependentUpon>NavigationTestFirstPage.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Tests\SqliteTests\Models\SqliteTestModel.cs" />
+    <Compile Include="Tests\SqliteTests\ViewModels\SqliteTestViewModel.cs" />
+    <Compile Include="Tests\SqliteTests\Views\SqliteTestPage.xaml.cs">
+      <DependentUpon>SqliteTestPage.xaml</DependentUpon>
+    </Compile>
     <Compile Include="ViewModels\BaseViewModel.cs" />
     <Compile Include="ViewModels\MainViewModel.cs" />
     <Compile Include="Views\MainPage.xaml.cs">
@@ -163,6 +168,12 @@
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Tests\NavigationTests\Views\NavigationTestThirdPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Tests\SqliteTests\Views\SqliteTestPage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
       <SubType>Designer</SubType>
     </EmbeddedResource>

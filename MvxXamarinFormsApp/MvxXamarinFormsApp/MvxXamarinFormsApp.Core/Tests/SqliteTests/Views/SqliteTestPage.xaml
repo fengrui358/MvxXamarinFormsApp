@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<core:MvxContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:core="clr-namespace:MvvmCross.Forms.Presenter.Core;assembly=MvvmCross.Forms.Presenter.Core"
+             x:Class="MvxXamarinFormsApp.Core.Tests.SqliteTests.Views.SqliteTestPage">
+  <StackLayout VerticalOptions="Center">
+    <Label Text="Sqllite测试页面" VerticalOptions="Center" HorizontalOptions="Center" />
+    <Label Text="todo:显示数据数量"></Label>
+    <Button Text="查看已有数据" Command="{Binding SearchDataCommand}"></Button>
+    <Button Text="插入随机数据" Command="{Binding InsertDataCommand}"></Button>
+    <ListView ItemsSource="{Binding SqliteTestModels}">
+      <ListView.ItemTemplate>
+        <DataTemplate>
+          <ViewCell>
+            <StackLayout>
+              <Label Text="{Binding Id}"></Label>
+              <Label Text="{Binding Name}"></Label>
+            </StackLayout>
+          </ViewCell>
+        </DataTemplate>
+      </ListView.ItemTemplate>
+    </ListView>
+  </StackLayout>
+</core:MvxContentPage>
