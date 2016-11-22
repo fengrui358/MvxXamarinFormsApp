@@ -1,3 +1,4 @@
+using Acr.UserDialogs;
 using Xamarin.Forms.Platform.Android;
 using Xamarin.Forms;
 using Android.OS;
@@ -25,6 +26,9 @@ namespace MvxXamarinFormsApp.Droid
 
             var presenter = Mvx.Resolve<IMvxViewPresenter>() as MvxFormsDroidPagePresenterEx;
             presenter.MvxFormsApp = mvxFormsApp;
+
+            //³õÊ¼»¯UserDialogs
+            UserDialogs.Init(() => (Activity) Forms.Context);
 
             Mvx.Resolve<IMvxAppStart>().Start();
         }

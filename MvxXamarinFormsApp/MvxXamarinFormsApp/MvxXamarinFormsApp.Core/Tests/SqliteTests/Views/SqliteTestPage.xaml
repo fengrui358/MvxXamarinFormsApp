@@ -2,7 +2,7 @@
 <core:MvxContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:core="clr-namespace:MvvmCross.Forms.Presenter.Core;assembly=MvvmCross.Forms.Presenter.Core"
-             x:Class="MvxXamarinFormsApp.Core.Tests.SqliteTests.Views.SqliteTestPage">
+             x:Class="MvxXamarinFormsApp.Core.Tests.SqliteTests.Views.SqliteTestPage" Title="Sqllite测试">
   <StackLayout VerticalOptions="Center">
     <Label Text="Sqllite测试页面" VerticalOptions="Center" HorizontalOptions="Center" />
     <Label Text="todo:显示数据数量"></Label>

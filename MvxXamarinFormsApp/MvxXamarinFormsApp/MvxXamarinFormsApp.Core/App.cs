@@ -1,4 +1,5 @@
 ﻿using System.Threading.Tasks;
+using Acr.UserDialogs;
 using MvvmCross.Core.ViewModels;
 using MvvmCross.Platform.IoC;
 using Xamarin.Forms;
@@ -29,6 +30,7 @@ namespace MvxXamarinFormsApp.Core
                 Resources.AppResources.Culture = Mvx.Resolve<Services.ILocalizeService>().GetCurrentCultureInfo();
             }
 
+            RegisterComponents();
             InitDataBase();
             RegisterAppStart<ViewModels.MainViewModel>();
         }
@@ -40,6 +42,11 @@ namespace MvxXamarinFormsApp.Core
             {
                 Mvx.RegisterSingleton(typeof(IRepository<SqliteTestModel>), () => new SqliteTestRepository());
             });
+        }
+
+        private void RegisterComponents()
+        {
+            Mvx.RegisterSingleton<IUserDialogs>(() => UserDialogs.Instance);
         }
     }
 }

@@ -2,7 +2,7 @@
 <core:MvxContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:core="clr-namespace:MvvmCross.Forms.Presenter.Core;assembly=MvvmCross.Forms.Presenter.Core"
-             x:Class="MvxXamarinFormsApp.Core.Tests.NavigationTests.Views.NavigationTestThirdPage">
+             x:Class="MvxXamarinFormsApp.Core.Tests.NavigationTests.Views.NavigationTestThirdPage" Title="第三页">
   <StackLayout VerticalOptions="Center">
     <Label Text="我是第三页" VerticalOptions="Center" HorizontalOptions="Center" />
     <Button Text="返回第一页" Command="{Binding NavigateGoBackCommand}"></Button>
