@@ -12,7 +12,13 @@ using MvvmCross.Core.ViewModels;
 using Android.App;
 using Android.Content.PM;
 using Android.Runtime;
+using FFImageLoading;
+using FFImageLoading.Config;
+using FFImageLoading.Forms;
+using FFImageLoading.Forms.Droid;
+using FFImageLoading.Helpers;
 using MvxXamarinFormsApp.Droid.MvxBase;
+using Environment = System.Environment;
 
 namespace MvxXamarinFormsApp.Droid
 {
@@ -21,9 +27,15 @@ namespace MvxXamarinFormsApp.Droid
     {
         protected override void OnCreate(Bundle bundle)
         {
+            #region 初始化异常处理
+
             AndroidEnvironment.UnhandledExceptionRaiser += AndroidEnvironmentOnUnhandledExceptionRaiser;
             AppDomain.CurrentDomain.UnhandledException += CurrentDomainOnUnhandledException;
             TaskScheduler.UnobservedTaskException += TaskSchedulerOnUnobservedTaskException;
+
+            #endregion
+
+            CachedImageRenderer.Init();
 
             base.OnCreate(bundle);
 

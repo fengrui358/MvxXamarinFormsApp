@@ -1,4 +1,9 @@
-﻿using Foundation;
+﻿using System;
+using FFImageLoading;
+using FFImageLoading.Config;
+using FFImageLoading.Forms.Touch;
+using FFImageLoading.Helpers;
+using Foundation;
 using MvvmCross.Core.ViewModels;
 using MvvmCross.iOS.Platform;
 using MvvmCross.Platform;
@@ -21,6 +26,8 @@ namespace MvxXamarinFormsApp.iOS
 
         public override bool FinishedLaunching(UIApplication app, NSDictionary options)
         {
+            CachedImageRenderer.Init();
+
             Window = new UIWindow(UIScreen.MainScreen.Bounds);
 
             var setup = new Setup(this, Window);

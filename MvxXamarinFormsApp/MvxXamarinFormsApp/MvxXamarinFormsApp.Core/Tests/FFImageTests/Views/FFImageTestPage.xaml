@@ -1,0 +1,8 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<core:MvxContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:core="clr-namespace:MvvmCross.Forms.Presenter.Core;assembly=MvvmCross.Forms.Presenter.Core"
+             xmlns:controllers="clr-namespace:MvxXamarinFormsApp.Core.UI.Controllers;assembly=MvxXamarinFormsApp.Core"
+             x:Class="MvxXamarinFormsApp.Core.Tests.FFImageTests.Views.FFImageTestPage">
+  <controllers:DefaultCachedImage Source="http://7xtg95.com1.z0.glb.clouddn.com/9.jpg" WidthRequest="300" HeightRequest="300"/>
+</core:MvxContentPage>

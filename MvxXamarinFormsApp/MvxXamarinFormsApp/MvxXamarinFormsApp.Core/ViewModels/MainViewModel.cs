@@ -1,4 +1,5 @@
 ﻿using MvvmCross.Core.ViewModels;
+using MvxXamarinFormsApp.Core.Tests.FFImageTests.ViewModels;
 using MvxXamarinFormsApp.Core.Tests.NavigationTests.ViewModels;
 using MvxXamarinFormsApp.Core.Tests.SqliteTests.ViewModels;
 using MvxXamarinFormsApp.Core.Tests.UserDialogsTests.ViewModels;
@@ -10,6 +11,7 @@ namespace MvxXamarinFormsApp.Core.ViewModels
         public MvxCommand NavigateCommand => new MvxCommand(NavigateCommandHandler);
         public MvxCommand SqliteTestCommand => new MvxCommand(SqliteTestCommandHandler);
         public MvxCommand UserDialogsTestCommand => new MvxCommand(UserDialogsTestCommandHandler);
+        public MvxCommand FFImageTestCommand => new MvxCommand(FFImageTestCommandHandler);
 
         private void NavigateCommandHandler()
         {
@@ -24,6 +26,11 @@ namespace MvxXamarinFormsApp.Core.ViewModels
         private void UserDialogsTestCommandHandler()
         {
             ShowViewModel<UserDialogsMainViewModel>();
+        }
+
+        private void FFImageTestCommandHandler()
+        {
+            ShowViewModel<FFImageTestViewModel>();
         }
     }
 }
