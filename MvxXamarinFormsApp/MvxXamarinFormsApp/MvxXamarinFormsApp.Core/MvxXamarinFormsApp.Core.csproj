@@ -38,6 +38,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="App.cs" />
+    <Compile Include="Extensions\ImageResourceExtension.cs" />
     <Compile Include="Model\BaseModel.cs" />
     <Compile Include="MvxBase\MvxFormsPagePresenterEx.cs" />
     <Compile Include="MvxBase\MvxPresentationHint\MvxCloseToViewModelPresentationHint.cs" />
@@ -173,6 +174,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Interface\" />
+    <Folder Include="UI\Images\" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Resources\AppResources.en-US.resx">
