@@ -3,6 +3,12 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:core="clr-namespace:MvvmCross.Forms.Presenter.Core;assembly=MvvmCross.Forms.Presenter.Core"
              xmlns:controllers="clr-namespace:MvxXamarinFormsApp.Core.UI.Controllers;assembly=MvxXamarinFormsApp.Core"
+             xmlns:forms="clr-namespace:FFImageLoading.Forms;assembly=FFImageLoading.Forms"
+             xmlns:transformations="clr-namespace:FFImageLoading.Transformations;assembly=FFImageLoading.Transformations"
              x:Class="MvxXamarinFormsApp.Core.Tests.FFImageTests.Views.FFImageTestPage">
-  <controllers:DefaultCachedImage Source="http://7xtg95.com1.z0.glb.clouddn.com/9.jpg" WidthRequest="300" HeightRequest="300"/>
+  <controllers:DefaultCachedImage Source="http://7xtg95.com1.z0.glb.clouddn.com/9.jpg" WidthRequest="300" HeightRequest="300">
+    <forms:CachedImage.Transformations>
+      <transformations:CircleTransformation />
+    </forms:CachedImage.Transformations>
+  </controllers:DefaultCachedImage>
 </core:MvxContentPage>
