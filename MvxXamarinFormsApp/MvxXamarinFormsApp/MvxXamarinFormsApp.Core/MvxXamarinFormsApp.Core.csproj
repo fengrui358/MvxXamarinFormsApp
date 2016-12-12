@@ -66,6 +66,11 @@
     <Compile Include="Tests\FFImageTests\Views\FFImageTestPage.xaml.cs">
       <DependentUpon>FFImageTestPage.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Tests\ListViewTests\Models\MockModel.cs" />
+    <Compile Include="Tests\ListViewTests\ViewModels\SimpleListViewModel.cs" />
+    <Compile Include="Tests\ListViewTests\Views\SimpleListPage.xaml.cs">
+      <DependentUpon>SimpleListPage.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Tests\NavigationTests\ViewModels\NavigationTestThirdViewModel.cs" />
     <Compile Include="Tests\NavigationTests\ViewModels\NavigationTestSecondViewModel.cs" />
     <Compile Include="Tests\NavigationTests\ViewModels\NavigationTestFirstViewModel.cs" />
@@ -226,6 +231,12 @@
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Tests\FFImageTests\Views\FFImageTestPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Tests\ListViewTests\Views\SimpleListPage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
       <SubType>Designer</SubType>
     </EmbeddedResource>

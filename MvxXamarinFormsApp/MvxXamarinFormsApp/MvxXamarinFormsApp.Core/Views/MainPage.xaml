@@ -13,5 +13,6 @@
     <Button Text="Sqlite测试" Command="{Binding SqliteTestCommand}"></Button>
     <Button Text="UserDialogs测试" Command="{Binding UserDialogsTestCommand}"></Button>
     <Button Text="FFImage测试" Command="{Binding FFImageTestCommand}"></Button>
+    <Button Text="ListView测试" Command="{Binding ListViewTestCommand}"></Button>
   </StackLayout>
 </core:MvxContentPage>
