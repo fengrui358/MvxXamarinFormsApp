@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<core:MvxContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:core="clr-namespace:MvvmCross.Forms.Presenter.Core;assembly=MvvmCross.Forms.Presenter.Core"
+             x:Class="MvxXamarinFormsApp.Core.Tests.DevicesInfoTests.Views.DevicesInfoTestPage">
+  <StackLayout VerticalOptions="Center">
+    <Label Text="{Binding DeviceId, StringFormat='设备Id：{0}'}" VerticalOptions="Center"/>
+    <Label Text="{Binding GenerateAppId, StringFormat='GenerateAppId：{0}'}" VerticalOptions="Center"/>
+    <Label Text="{Binding Model, StringFormat='设备型号：{0}'}" VerticalOptions="Center"/>
+    <Label Text="{Binding Version, StringFormat='版本号：{0}'}" VerticalOptions="Center"/>
+    <Label Text="{Binding Platform, StringFormat='OS平台：{0}'}" VerticalOptions="Center"/>
+  </StackLayout>
+</core:MvxContentPage>
