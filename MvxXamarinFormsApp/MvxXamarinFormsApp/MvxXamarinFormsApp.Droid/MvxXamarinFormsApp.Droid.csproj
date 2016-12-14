@@ -232,6 +232,8 @@
     <Compile Include="Services\LocalizeService.cs" />
     <Compile Include="Setup.cs" />
     <Compile Include="SplashScreen.cs" />
+    <Compile Include="UI\HybridWeb\HybridWebViewCommonRenderer.cs" />
+    <Compile Include="UI\HybridWeb\HybridWebViewRenderer.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="GettingStarted.Xamarin" />
