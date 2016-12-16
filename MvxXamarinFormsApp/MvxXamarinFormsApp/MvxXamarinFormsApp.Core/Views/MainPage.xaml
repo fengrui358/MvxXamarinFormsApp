@@ -15,5 +15,6 @@
     <Button Text="FFImage测试" Command="{Binding FFImageTestCommand}"></Button>
     <Button Text="ListView测试" Command="{Binding ListViewTestCommand}"></Button>
     <Button Text="DeviceInfo测试" Command="{Binding DeviceInfoTestCommand}"></Button>
+    <Button Text="HybridWeb测试" Command="{Binding HybridWebTestCommand}"></Button>
   </StackLayout>
 </core:MvxContentPage>

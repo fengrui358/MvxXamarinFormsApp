@@ -70,6 +70,10 @@
     <Compile Include="Tests\FFImageTests\Views\FFImageTestPage.xaml.cs">
       <DependentUpon>FFImageTestPage.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Tests\HybridWebTest\ViewModels\HybridWebTestViewModel.cs" />
+    <Compile Include="Tests\HybridWebTest\Views\HybridWebTestPage.xaml.cs">
+      <DependentUpon>HybridWebTestPage.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Tests\ListViewTests\Models\MockModel.cs" />
     <Compile Include="Tests\ListViewTests\ViewModels\SimpleListViewModel.cs" />
     <Compile Include="Tests\ListViewTests\Views\SimpleListPage.xaml.cs">
@@ -256,6 +260,12 @@
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Tests\DevicesInfoTests\Views\DevicesInfoTestPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Tests\HybridWebTest\Views\HybridWebTestPage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
       <SubType>Designer</SubType>
     </EmbeddedResource>

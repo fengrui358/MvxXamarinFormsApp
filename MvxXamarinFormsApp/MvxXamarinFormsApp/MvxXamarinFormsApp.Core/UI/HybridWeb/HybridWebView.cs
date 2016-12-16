@@ -24,6 +24,7 @@ using System.Collections.Generic;
 using System.Runtime.Serialization;
 using System.Text;
 using System.Threading.Tasks;
+using MvvmCross.Platform;
 using MvvmCross.Platform.Core;
 using MvvmCross.Platform.Platform;
 using Xamarin.Forms;
@@ -108,16 +109,12 @@ namespace MvxXamarinFormsApp.Core.UI.HybridWeb
         /// </summary>
         private readonly Dictionary<string, Func<string, object[]>> registeredFunctions;
 
-        ///// <summary>
-        ///// Initializes a new instance of the <see cref="HybridWebView" /> class.
-        ///// </summary>
-        ///// <remarks>HybridWebView will use <see cref="IJsonSerializer" /> configured
-        ///// with <see cref="Resolver"/> or <see cref="DependencyService"/>. 
-        ///// If neither one resolves it then <see cref="SystemJsonSerializer"/> will be used.</remarks>
-        //public HybridWebView() : this((Resolver.IsSet ? Resolver.Resolve<IJsonSerializer>() : null)
-        //        ?? DependencyService.Get<IJsonSerializer>() ?? new SystemJsonSerializer())
-        //{
-        //}
+        /// <summary>
+        /// Initializes a new instance of the <see cref="HybridWebView" /> class.
+        /// </summary>
+        public HybridWebView() : this(Mvx.Resolve<IMvxJsonConverter>())
+        {
+        }
 
         /// <summary>
         /// Initializes a new instance of the <see cref="HybridWebView" /> class.
